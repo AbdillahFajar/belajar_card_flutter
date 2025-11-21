@@ -14,18 +14,24 @@ class CardPage1 extends StatelessWidget {
             body: SingleChildScrollView(
               child: Container(
                 padding: const EdgeInsets.all(20.0),
-                child: const Column(
+                child: Column(
                   children: [
                     Card(
                       color: Colors.amber,
                       elevation: 8, //bikin efek bayangan di card-nya
-                      child: Text(
-                        "Card warna amber",
-                        style: TextStyle(
-                          fontSize: 16.0
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0), 
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "Card warna amber",
+                          style: TextStyle(
+                            fontSize: 16.0
+                          ),
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
