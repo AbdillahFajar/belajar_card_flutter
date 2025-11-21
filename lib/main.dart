@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './pages/card_page_1.dart';
+// import './pages/card_page_1.dart';
+import './pages/card_page_2.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         primarySwatch: Colors.amber,
       ),
-      home: CardPage1(),
+      home: CardPage2(),
     );
   }
 }
