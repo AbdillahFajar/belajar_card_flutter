@@ -28,7 +28,7 @@ class CardPage2 extends StatelessWidget {
                   ),
                   const SizedBox(height: 12),
                   Text(
-                    '''Assalamu\'alaikum... Nama saya, Fajar Abdillah. Saya adalah mahasiswa semester 5 di Institut Teknologi dan Bisnis Bina Sarana Global\nfakultas Teknologi Informasi dan Komunikasi, jurusan Teknik Informatika \nyang berfokus pada pembelajaran pengembangan perangkat lunak. Saya memiliki ketertarikan di bidang pengembngan aplikasi backend\nbaik web ataupun mobile.''' ,
+                    '''Assalamu\'alaikum... Nama saya, Fajar Abdillah. Saya adalah mahasiswa semester 5 di Institut Teknologi dan Bisnis Bina Sarana Global\nfakultas Teknologi Informasi dan Komunikasi, jurusan Teknik Informatika yang berfokus pada pembelajaran pengembangan perangkat lunak.\nSaya memiliki ketertarikan di bidang pengembngan aplikasi backend baik web ataupun mobile.''' ,
                     style: TextStyle(
                       fontSize: 15,
                       color: Colors.grey[700],
