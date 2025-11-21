@@ -18,6 +18,7 @@ class CardPage1 extends StatelessWidget {
                   children: [
                     Center(
                       child: Card(
+                        semanticContainer: true, //menentukan apakah card ini adalah kontainer semantik. Kalau true, card akan dianggap sebagai satu kesatuan oleh pembaca layar. Kalau false, pembaca layar mungkin akan memperlakukan konten di dalam card secara terpisah. Cari tahu lagi lebih jelasnya!
                         //Menentukan bagaimana konten atau isi card dipotong dengan clipBehavior. Tapi, gak ada perbedaannya. Mungkin harus dihapusin yang gak perlu dulu
                         // clipBehavior: Clip.none, //gak dipotong sama sekali kontennya,
                         // clipBehavior: Clip.hardEdge, //kontennya dipotong sesuai border card-nya,
