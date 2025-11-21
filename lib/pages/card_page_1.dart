@@ -18,12 +18,13 @@ class CardPage1 extends StatelessWidget {
                   children: [
                     Card(
                       color: Colors.amber,
+                      elevation: 8, //bikin efek bayangan di card-nya
                       child: Text(
                         "Card warna amber",
                         style: TextStyle(
                           fontSize: 16.0
-                        )
-                      )
+                        ),
+                      ),
                     )
                   ],
                 ),
