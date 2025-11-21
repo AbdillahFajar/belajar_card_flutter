@@ -18,6 +18,7 @@ class CardPage1 extends StatelessWidget {
                   children: [
                     Center(
                       child: Card(
+                        shadowColor: Colors.red, //pake shadowColor untuk memberikan warna pada efek bayangannya (elevation)
                         semanticContainer: true, //menentukan apakah card ini adalah kontainer semantik. Kalau true, card akan dianggap sebagai satu kesatuan oleh pembaca layar. Kalau false, pembaca layar mungkin akan memperlakukan konten di dalam card secara terpisah. Cari tahu lagi lebih jelasnya!
                         //Menentukan bagaimana konten atau isi card dipotong dengan clipBehavior. Tapi, gak ada perbedaannya. Mungkin harus dihapusin yang gak perlu dulu
                         // clipBehavior: Clip.none, //gak dipotong sama sekali kontennya,
@@ -27,9 +28,9 @@ class CardPage1 extends StatelessWidget {
                         margin: EdgeInsets.all(16.0), //bikin jarak di sekitar card-nya (di luar card)
                         color: Colors.amber,
                         elevation: 8, //bikin efek bayangan di card-nya
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0), 
-                          side: BorderSide(
+                        shape: RoundedRectangleBorder( //menggunakan properti shape untuk mengatur bentuk card-nya
+                          borderRadius: BorderRadius.circular(15.0),  //mmebuat lengkungan di sudut card-nya
+                          side: BorderSide( //pake properti side supaya bisa pakai BorderSide untuk tambahin border beserta hiasannya di card
                             color: Colors.black,
                             width: 3.0
                           ),
