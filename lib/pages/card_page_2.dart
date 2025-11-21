@@ -6,8 +6,42 @@ class CardPage2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Card Page 2"), actions: const []),
-      body: SingleChildScrollView(child: Center(child: Card(elevation: 8))),
+      appBar: AppBar(
+        title: const Text("Card Page 2"),
+        actions: const [],
+      ),
+      body: SingleChildScrollView(
+        child: Center(
+          child: Card(
+            elevation: 8,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Tentang Saya',
+                  style: TextStyle(
+                    fontSize: 20, 
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Text(
+                  '''Assalamu\'alaikum... Nama saya, Fajar Abdillah. Saya adalah mahasiswa semester 5 di 
+                  Institut Teknologi dan Bisnis Bina Sarana Global\n fakultas Teknologi Informasi dan Komunikasi, jurusan Teknik Informatika \n
+                  yang berfokus pada pembelajaran pengembangan perangkat lunak. Saya memiliki ketertarikan di bidang pengembngan aplikasi backend\n
+                  baik web ataupun mobile.  ''' ,
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Colors.grey[700],
+                    height: 1.5,
+                  ),
+                  textAlign: TextAlign.justify,
+                )
+              ],
+            )
+          )
+        )
+      ),
     );
   }
 }
