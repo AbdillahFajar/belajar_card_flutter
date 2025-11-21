@@ -17,13 +17,14 @@ class CardPage1 extends StatelessWidget {
                 child: Column(
                   children: [
                     Card(
+                      margin: EdgeInsets.all(16.0), //bikin jarak di sekitar card-nya (di luar card)
                       color: Colors.amber,
                       elevation: 8, //bikin efek bayangan di card-nya
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0), 
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      child: Padding( //widget Padding, supaya bisa pakai properti padding kayak di bawah ini
+                        padding: const EdgeInsets.all(8.0), //bikin spasi di sekitar tulisan/isi/konten di dalam card-nya
                         child: Text(
                           "Card warna amber",
                           style: TextStyle(
