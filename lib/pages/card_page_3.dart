@@ -15,7 +15,6 @@ class CardPage3 extends StatelessWidget {
               shadowColor: Colors.grey,
               clipBehavior: Clip.antiAlias,
               child: Container(
-                width: 500,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topRight,
@@ -51,7 +50,21 @@ class CardPage3 extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 26.0,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: Colors.black,
+                        )
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: const Text(
+                          'Gray Monster',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                          )
                         )
                       )
                     ]
