@@ -53,7 +53,9 @@ class CardPage3 extends StatelessWidget {
                           color: Colors.black,
                         )
                       ),
+                      SizedBox(height: 10),
                       Container(
+                        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 6),
                         decoration: BoxDecoration(
                           color: Colors.blue,
                           borderRadius: BorderRadius.circular(20),
@@ -66,6 +68,87 @@ class CardPage3 extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                           )
                         )
+                      ),
+                      SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                         Column(
+                          children:[
+                             Text(
+                            "27 March\n1985",
+                            style: TextStyle(
+                              fontSize: 22.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            "Born",
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.bold,
+                            )
+                          ),
+                          ]
+                         ),
+                          SizedBox(
+                            height: 40,
+                            child: VerticalDivider(
+                              thickness: 1,
+                              color: Colors.black,
+                              width: 1,
+                            )
+                          ),
+                          Column(
+                          children:[
+                             Text(
+                            "Mile",
+                            style: TextStyle(
+                              fontSize: 22.0,
+                              fontWeight: FontWeight.bold,
+                            )
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            "Distance",
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.bold,
+                            )
+                          ),
+                          ]
+                         ),
+                          SizedBox(
+                            height: 40,
+                            child: VerticalDivider(
+                              thickness: 1,
+                              color: Colors.black,
+                              width: 1,
+                            )
+                          ),
+                          Column(
+                          children:[
+                             Text(
+                            "3 July\n2010",
+                            style: TextStyle(
+                              fontSize: 22.0,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(height: 5),
+                          Text(
+                            "Died",
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.bold,
+                            )
+                          ),
+                          ]
+                         ),
+                        ]
                       )
                     ]
                   ),
