@@ -30,7 +30,8 @@ class CardPage3 extends StatelessWidget {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          shape: BoxShape.circle
+                          shape: BoxShape.circle,
+                          border: Border.all(color: Colors.grey, width: 5)
                         ),  
                         child: CircleAvatar(
                           radius: 60,
