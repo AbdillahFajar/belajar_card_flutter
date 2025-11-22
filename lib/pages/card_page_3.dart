@@ -25,7 +25,7 @@ class CardPage3 extends StatelessWidget {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Row(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
@@ -43,6 +43,15 @@ class CardPage3 extends StatelessWidget {
                         child: CircleAvatar(
                           radius: 60,
                           backgroundImage: AssetImage('assets/images/oguricap_icon.png'),
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        "Oguri Cap",
+                        style: TextStyle(
+                          fontSize: 26.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         )
                       )
                     ]
