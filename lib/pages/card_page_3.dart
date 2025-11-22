@@ -6,7 +6,6 @@ class CardPage3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Oguri Cap Card"), actions: const []),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(20.0),
@@ -16,14 +15,28 @@ class CardPage3 extends StatelessWidget {
               shadowColor: Colors.grey,
               clipBehavior: Clip.antiAlias,
               child: Container(
+                width: 500,
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topRight,
                     end: Alignment.bottomLeft,
-                    colors: [Colors.blue.shade500, Colors.grey.shade300],
+                    colors: [Colors.blue.shade400, Colors.grey.shade300],
                   ),
                 ),
-                child: Text("Oguri Cap", style: TextStyle(fontSize: 20)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle
+                      ),  
+                      child: CircleAvatar(
+                        radius: 60,
+                        backgroundImage: AssetImage('assets/images/oguricap_icon.png'),
+                      )
+                    )
+                  ]
+                ),
               ),
             ),
           ),
