@@ -23,19 +23,22 @@ class CardPage3 extends StatelessWidget {
                     colors: [Colors.blue.shade400, Colors.grey.shade300],
                   ),
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle
-                      ),  
-                      child: CircleAvatar(
-                        radius: 60,
-                        backgroundImage: AssetImage('assets/images/oguricap_icon.png'),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle
+                        ),  
+                        child: CircleAvatar(
+                          radius: 60,
+                          backgroundImage: AssetImage('assets/images/oguricap_icon.png'),
+                        )
                       )
-                    )
-                  ]
+                    ]
+                  ),
                 ),
               ),
             ),
