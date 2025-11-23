@@ -110,6 +110,57 @@ class CreditCard extends StatelessWidget {
 
                         SizedBox(height: 10),
 
+                        //Langkah 5: Bikin nomor rekening (norek)
+                        //Start bikin norek yang disusun dengan row, karena, di tiap 4 angkanya, ada spasi 
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start, 
+                          children: [
+                            Text(
+                              '4562',
+                              style: TextStyle(
+                                fontSize: 30.0,
+                                color: Colors.white,
+                                fontFamily: 'RobotoMono',
+                              ),
+                            ),
+
+                            SizedBox(width: 20),
+
+                            Text(
+                              '1112',
+                              style: TextStyle(
+                                fontSize: 30.0,
+                                color: Colors.white,
+                                fontFamily: 'RobotoMono',
+                              ),
+                            ),
+
+                            SizedBox(width: 20),
+
+                            Text(
+                              '4595',
+                              style: TextStyle(
+                                fontSize: 30.0,
+                                color: Colors.white,
+                                fontFamily: 'RobotoMono',
+                              ),
+                            ),
+
+                            SizedBox(width: 20),
+
+                            Text(
+                              '7852',
+                              style: TextStyle(
+                                fontSize: 30.0,
+                                color: Colors.white,
+                                fontFamily: 'RobotoMono',
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        SizedBox(height: 15),
+
                         
                       ],
                     ),
