@@ -12,7 +12,8 @@ class CreditCard extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(20.0),
           child: Card(
-            clipBehavior: Clip.antiAlias, //Karena container menggunakan gradient, maka hal ini menutup seluruh radius (sudut melingkar) bawaan card, sehingga memerlukan clip: antiAlias untuk mengaktifkan kembali sifat radius bawaan dari card tersebut sehingga, lengkungan card-nya kembali terlihat
+            clipBehavior: Clip
+                .antiAlias, //Karena container menggunakan gradient, maka hal ini menutup seluruh radius (sudut melingkar) bawaan card, sehingga memerlukan clip: antiAlias untuk mengaktifkan kembali sifat radius bawaan dari card tersebut sehingga, lengkungan card-nya kembali terlihat
             child: Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -23,15 +24,19 @@ class CreditCard extends StatelessWidget {
               ),
               //Langkah 2: Bikin Column untuk membungkus semua konten card-nya
               child: Column(
-                mainAxisSize: MainAxisSize.min, //ini agar ukuran column, menyesuaikan dengan isinya (children-nya)
+                mainAxisSize: MainAxisSize
+                    .min, //ini agar ukuran column, menyesuaikan dengan isinya (children-nya)
                 children: [
                   Padding(
-                    padding: const EdgeInsets.all(20.0), //ini digunakan untuk memberi jarak dalam, agar isi card-nya punya jarak di sekeliling mereka
+                    padding: const EdgeInsets.all(
+                      20.0,
+                    ), //ini digunakan untuk memberi jarak dalam, agar isi card-nya punya jarak di sekeliling mereka
                     child: Column(
                       children: [
                         //Langkah 3: Bikin konten pertama yang disusun dengan row. Posisi konten ini akan berada di paling atas dari semua konten yang ada
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween, //ini agar isi row-nya punya jarak di antara mereka. Semakin sedikit isi row-nya, jaraknya akan semakin lebar
+                          mainAxisAlignment: MainAxisAlignment
+                              .spaceBetween, //ini agar isi row-nya punya jarak di antara mereka. Semakin sedikit isi row-nya, jaraknya akan semakin lebar
                           children: [
                             //Start bikin Logo BCA pake AssetImage
                             Container(
@@ -111,9 +116,9 @@ class CreditCard extends StatelessWidget {
                         SizedBox(height: 10),
 
                         //Langkah 5: Bikin nomor rekening (norek)
-                        //Start bikin norek yang disusun dengan row, karena, di tiap 4 angkanya, ada spasi 
+                        //Start bikin norek yang disusun dengan row, karena, di tiap 4 angkanya, ada spasi
                         Row(
-                          crossAxisAlignment: CrossAxisAlignment.start, 
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               '4562',
@@ -161,7 +166,90 @@ class CreditCard extends StatelessWidget {
 
                         SizedBox(height: 15),
 
-                        
+                        //Langkah 6: Bikin semua konten terakhir yang mencakup tanggal kadaluwarsa kartu, nama nasabah dan logo mastercard dan susun dengan 1 row
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment
+                              .spaceBetween, //Konten terakhir, dibagi menjadi 2 bagian, yang pertama disusun dengan column, yang berisi tanggal kadaluwarsa kartu dan nama nasabah dan kedua, logo mastercard. Kedua konten ini, diatur posisinya dengan spaceBetween
+                          children: [
+                            //Pembuatan konten terakhir, bagian pertama: 
+                            //Bikin tanggal kadaluwarsa kartu dan nama nasabah
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              //Row untuk bikin tanggal kadaluwarsa kartu
+                              children: [
+                                Row(
+                                  children: [
+                                    Text(
+                                      'VALID\nTHRU',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        color: Colors.white,
+                                        fontFamily: 'RobotoMono',
+                                      ),
+                                    ),
+                                    SizedBox(width: 30),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          'MONTH/YEAR',
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            color: Colors.white,
+                                            fontFamily: 'RobotoMono',
+                                          ),
+                                        ),
+                                        Text(
+                                          '12/25',
+                                          style: TextStyle(
+                                            fontSize: 24,
+                                            color: Colors.white,
+                                            fontFamily: 'RobotoMono',
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 10),
+                                //Bikin nama nasabah
+                                Text(
+                                  'FAJAR ABDILLAH',
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    color: Colors.white,
+                                    fontFamily: 'RobotoMono',
+                                  ),
+                                ),
+                              ],
+                            ),
+
+                            //Pembuatan konten terakhir bagian dua:
+                            //Bikin logo mastercard (lingkaran merah dan kuning) dengan menyusunnya menggunakan Stack, agar kedua lingkarannya, bisa saling tindih
+                            Stack(
+                              children: [
+                                Container(
+                                  width: 60,
+                                  height: 60,
+                                  decoration: const BoxDecoration(
+                                    color: Color(0xFFEB001B),
+                                    shape: BoxShape.circle,
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(left: 30),
+                                  width: 60,
+                                  height: 60,
+                                  decoration: const BoxDecoration(
+                                    color: Color(0xFFF79E1B),
+                                    shape: BoxShape.circle,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
